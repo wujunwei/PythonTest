@@ -1,5 +1,7 @@
 import socket
-#使用socket扫描端口，并获取占用，可能会被防火墙屏蔽
+
+# 运行在腾讯云
+# 使用socket扫描端口，并获取占用，可能会被防火墙屏蔽
 
 
 def connScan(tgtHost, tgtPort):
@@ -9,7 +11,7 @@ def connScan(tgtHost, tgtPort):
         connSkt.send('ViolentPython\r\n'.encode())
         results = connSkt.recv(100)
         print('[+]%d/tcp closed' % tgtPort)
-        print('[+] '+str(results.decode()))
+        print('[+] ' + str(results.decode()))
         connSkt.close()
     except Exception as e:
         print(e)
@@ -51,5 +53,7 @@ def main():
         print('[-] You must specify a target host and port[s].')
         exit(0)
     portScan(tgtHost, tgtPorts)
+
+
 if __name__ == '__main__':
     main()

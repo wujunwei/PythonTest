@@ -1,9 +1,10 @@
 from PIL import Image
-#图片转字符图 ，适用于色差较大的图片
+
+# 图片转字符图 ，适用于色差较大的图片
 
 
-filename = "C:\\Users\\Administrator\\Desktop\\dora.png"
-output_name = "C:\\Users\\Administrator\\Desktop\\53.txt"
+filename = r"C:\Users\Administrator\Desktop\dora.png"
+output_name = r"C:\Users\Administrator\Desktop\53.txt"
 img = Image.open(filename)
 WIDTH = img.size[0]
 HEIGHT = img.size[1]
@@ -33,7 +34,6 @@ if __name__ == '__main__':
         for j in range(WIDTH):
             txt += get_char(*im.getpixel((j, i)))
         txt += '\n'
-
 
     if OUTPUT:
         with open(OUTPUT, 'w') as f:
