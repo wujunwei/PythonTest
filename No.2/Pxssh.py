@@ -2,6 +2,7 @@ import pxssh
 
 # 在腾讯云运行
 
+
 def send_common(s, cmd):
     s.sendline(cmd)
     s.prompt()
