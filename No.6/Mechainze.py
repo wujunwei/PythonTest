@@ -6,5 +6,5 @@ def viewPage(url):
     page = browser.open(url)
     source_code = page.read()
     print(source_code)
-viewPage('http://www.syngress.con/')
+viewPage('http://www.syngress.com/')
 
