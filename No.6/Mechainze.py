@@ -27,7 +27,7 @@ import mechanize
 # testProxy(ur, hideMeProxy)
 
 
-# test useragent
+# test userAgent
 
 
 def testUserAgent(url, userAgent):
@@ -37,6 +37,6 @@ def testUserAgent(url, userAgent):
     page = browser.open(url)
     source_code = page.read()
     print(source_code)
-url = 'http://www.baidu.com/'
+url = 'http://whatismyuseragent.dotdoh.com/'
 userAgent = [('User-agent', 'Mozilla/5.0 (X11; U; ' + 'Linux 2.4.2-2 i586; en-us; m18) Gecko/20010131 Netscape6/6.01')]
 testUserAgent(url, userAgent)
