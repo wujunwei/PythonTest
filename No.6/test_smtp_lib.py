@@ -4,11 +4,11 @@ from email.mime.text import MIMEText
 
 def sendMail(user, pwd, to, subject, text):
     msg = MIMEText(text)
-    msg['From'] = user
+    msg['From'] = "heck@none.com"
     msg['To'] = to
     msg['Subject'] = subject
     try:
-        smtpServer = smtplib.SMTP('smtp.163.com', 57)
+        smtpServer = smtplib.SMTP('smtp.163.com')
         smtpServer.set_debuglevel(1)
         print("[+] Connecting!")
         smtpServer.ehlo()
@@ -25,5 +25,5 @@ def sendMail(user, pwd, to, subject, text):
 
 From = "15651757672@163.com"
 password = "QWERTYUIOP123"
-sendMail(From, password, From, 'Re: Important', 'Test Server')
+sendMail(From, password, "15651757672@163.com", 'Re: Important', 'Test Server')
 
