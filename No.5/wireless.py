@@ -6,9 +6,9 @@ def pktPrint(pkt):
         print('[+] Detected 802.11 Beacon Frame')
     elif pkt.haslayer(Dot11ProbeReq):
         print('[+] Detected 802.22 Probe Request Frame')
-    elif pkt.haslayer(TCP)
+    elif pkt.haslayer(TCP):
         print('[+] Detected TCP Packet')
-    elif pkt.haslayer(DNS)
+    elif pkt.haslayer(DNS):
         print('[+] Detected a DNS Packet')
 conf.iface = 'mon0'
 sniff(prn=pktPrint)
