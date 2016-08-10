@@ -20,6 +20,6 @@ def testProxy(url, proxy):
     print(source_code)
 
 
-ur = 'http://ip.nefsc.noaa.gov/'
+ur = 'http://www.baidu.com/'
 hideMeProxy = {'http': '216.155.139.115:3128'}
 testProxy(ur, hideMeProxy)
