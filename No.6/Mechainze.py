@@ -33,6 +33,7 @@ import mechanize
 def testUserAgent(url, userAgent):
     browser = mechanize.Browser()
     browser.addheaders = userAgent
+    browser.set_handle_robots(False)
     page = browser.open(url)
     source_code = page.read()
     print(source_code)
