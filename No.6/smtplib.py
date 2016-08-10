@@ -21,7 +21,7 @@ def sendMail(user, pwd, to, subject, text):
         smtpServer.sendmail(user, to, msg.as_string())
         smtpServer.close()
     except Exception as e:
-        print("[-] " + e)
+        print(e)
 
 From = "15651757672@163.com"
 password = "QWERTYUIOP123"
