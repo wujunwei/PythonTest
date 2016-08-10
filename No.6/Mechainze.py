@@ -36,12 +36,12 @@ def testUserAgent(URL, UserAgent):
     browser.set_handle_robots(False)
     page = browser.open(URL)
     source_code = page.read()
-    bs = BeautifulSoup(source_code)
+    bs = BeautifulSoup(source_code, "html")
     tag_a = bs.find_all(name='a')
     for link in tag_a:
         if link.has_key('herf'):
             print(link['herf'])
-    print(source_code)
+    # print(source_code)
 url = 'http://whatismyuseragent.dotdoh.com/'
 userAgent = [('User-agent', 'Mozilla/5.0 (X11; U; ' + 'Linux 2.4.2-2 i586; en-us; m18) Gecko/20010131 Netscape6/6.01')]
 testUserAgent(url, userAgent)
