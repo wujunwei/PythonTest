@@ -23,8 +23,8 @@ def printNets():
             netName = str(name)
             print('[+] ' + netName + " " + macAddr)
             CloseKey(netkey)
-        except:
-            break
+        except Exception as e:
+            print(e)
 
 
 def main():
