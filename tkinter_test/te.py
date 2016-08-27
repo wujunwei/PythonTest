@@ -14,7 +14,7 @@ frm_L.pack(side=LEFT)
 
 #right
 frm_R = Frame(frm)
-Label(frm_R, text='敬业', bg='red', font=('Arial', 15)).pack(side=TOP)
+Label(frm_R, text='敬业', font=('Arial', 15)).pack(side=TOP)
 Label(frm_R, text='乐群', font=('Arial', 15)).pack(side=TOP)
 frm_R.pack(side=RIGHT)
 
