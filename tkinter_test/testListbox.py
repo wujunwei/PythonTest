@@ -1,23 +1,18 @@
 from tkinter import *
 
 root = Tk()
-root.title("hello world")
-root.geometry()
+root.wm_attributes('-topmost', 1)
 
 
-def print_item(event):
-    print(lb.get(lb.curselection()))
+def printCoords(event):
+    print('event.char = ', event.char)
+    print('event.keycode = ', event.keycode)
 
-var = StringVar()
-lb = Listbox(root, listvariable=var)
-list_item = [1, 2, 3, 4]  # 控件的内容为1 2 3 4
-for item in list_item:
-    lb.insert(END, item)
-# lb.delete(2, 4)  # 此时控件的内容为1 3
-#
-# var.set(('a', 'ab', 'c', 'd'))  # 重新设置了，这时控件的内容就编程var的内容了
-print(var.get())
-lb.bind('<ButtonRelease-1>', print_item)
-lb.pack()
 
+# 创建第一个   Button,并将它与Key键绑定
+bt1 = Button(root, text='Press BackSpace')
+bt1.bind('<Control-Alt-b>', printCoords)
+# 将焦点设置到第   1个  Button上
+bt1.focus_set()
+bt1.grid()
 root.mainloop()
