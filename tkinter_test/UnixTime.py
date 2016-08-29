@@ -42,11 +42,11 @@ inputBox.pack()
 change_int = Button(mainFrame, text="时间戳转string", command=lambda: change_unix_to_date(Unix, result))
 change_int.pack(side=LEFT)
 
-hide_btn = Button(mainFrame, text="隐藏", command=root.withdraw)
+hide_btn = Button(mainFrame, text="退出", command=root.quit)
 hide_btn.pack(side=BOTTOM)
 
 change_str = Button(mainFrame, text="string转时间戳", command=lambda: change_date_to_unix(Unix, result))
 change_str.pack(side=RIGHT)
-
 mainFrame.pack()
+root.bind_all("<Control-n>", lambda event: print('加速键Ctrl+N'))
 root.mainloop()
