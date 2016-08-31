@@ -1,6 +1,8 @@
 import pythoncom
 import pyHook
 
+f = open('out.txt', 'w')
+
 
 def onMouseEvent(event):
     # 监听鼠标事件
@@ -22,17 +24,17 @@ def onMouseEvent(event):
 
 def onKeyboardEvent(event):
     # 监听键盘事件
-    print("MessageName:", event.MessageName)
-    print("Message:", event.Message)
-    print("Time:", event.Time)
-    print("Window:", event.Window)
-    print("WindowName:", event.WindowName)
-    print("Ascii:", event.Ascii, chr(event.Ascii))
+    # print("MessageName:", event.MessageName, file=f)
+    # print("Message:", event.Message, file=f)
+    # print("Time:", event.Time, file=f)
+    # print("Window:", event.Window, file=f)
+    # print("WindowName:", event.WindowName, file=f)
+    # print("Ascii:", event.Ascii, chr(event.Ascii))
     print("Key:", event.Key)
-    print("KeyID:", event.KeyID)
+    # print("KeyID:", event.KeyID)
     print("ScanCode:", event.ScanCode)
-    print("Extended:", event.Extended)
-    print("Injected:", event.Injected)
+    # print("Extended:", event.Extended)
+    # print("Injected:", event.Injected)
     print("Alt", event.Alt)
     print("Transition", event.Transition)
     print("---")
@@ -58,5 +60,6 @@ def main():
     # 进入循环，如不手动关闭，程序将一直处于监听状态
     pythoncom.PumpMessages(10000)
 
+
 if __name__ == "__main__":
-        main()
+    main()
